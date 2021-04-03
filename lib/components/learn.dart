@@ -1,6 +1,10 @@
+// importing
+
+import 'dart:math';
+
 // Hello world!
 
-void hello_world() {
+void helloWorld() {
   print('Hello world!');
 }
 
@@ -9,16 +13,13 @@ void hello_world() {
 int integerNumber = 1;
 double floatingPointNumber = 1.0;
 
-String greeting = 'Hello, world!';
+String helloWorldString = 'Hello, world!';
 
-List<int> numbers = [1,2,3,4];
+List<int> numbers = [1, 2, 3, 4];
 
-Set<int> numberSet = [1,2,3,4];
+Set<int> numberSet = {1, 2, 3, 4};
 
-Map<String, int> students = {
-  'james': 11,
-  'amy': 12
-};
+Map<String, int> students = {'james': 11, 'amy': 12};
 
 void printDatas() {
   print(integerNumber);
@@ -35,11 +36,12 @@ final num1 = 1;
 // IMMUTABLE
 const num2 = 2;
 
-List<int> list = [1,2]
-void for_loop() {
-  for (int i in list) { // This is possible, and it's pretty it JS
+List<int> list = [1, 2];
+void forLoop() {
+  for (int i in list) {
+    // This is possible, and it's pretty it JS
     print(i);
-  };
+  }
 }
 
 // function
@@ -55,17 +57,12 @@ void addNumbers(List<int> list, Function add) {
 }
 
 // have an error...?
-int process(int Function(int, int) function) -> return function(1,2);
-
-// importing
-
-import 'dart:math';
+int process(int Function(int, int) function) => function(1, 2);
 
 // main is needed, but we'll gon' use it very rarely in flutter
 void main() {
   final random = new Random();
   int a = random.nextInt(10);
   int b = random.nextInt(10);
-  print("$a + $b = ${a+b}");
+  print("$a + $b = ${a + b}");
 }
-
